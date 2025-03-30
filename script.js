@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const weight = parseFloat(document.getElementById('weight').value);
     const height = parseFloat(document.getElementById('height').value);
 
-    if (weight > 0 && height > 0) {
+    if (weight > 0.00 && height > 0.00) {
       const bmi = weight / (height * height);
       let advice = '';
 
