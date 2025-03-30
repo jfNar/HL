@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Сайт о здоровом образе жизни, включая физические упражнения, управление весом и сбалансированное питание.">
+  <title>Управление весом - Healthy Lifestyle</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="wrapper container">
+      <div class="hamburger">&#9776;</div>
+      <div class="logo">
+        <img src="img/logo.png" alt="Healthy Lifestyle Logo">
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="weight.html">Управление весом</a></li>
+          <li><a href="balance.html">Сбалансированное питание</a></li>
+          <li><a href="exercises.html">Физические упражнения</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <h1>Управление весом</h1>
+    <p>Эффективное управление весом важно для поддержания здоровья. Узнайте, как достичь своих целей!</p>
+    <img src="img/weight-management.jpg" alt="Weight Management" style="width:100%; border-radius:8px; margin-top:20px;">
+    
+    <h2>Калькулятор ИМТ</h2>
+    <form id="bmiForm">
+        <label for="weight">Вес (кг):</label>
+        <input type="number" id="weight" required>
+        
+        <label for="height">Рост (м):</label>
+        <input type="number" id="height" required>
+        
+        <button type="submit">Рассчитать ИМТ</button>
+    </form>
+    
+    <div id="result" style="margin-top: 20px;"></div>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <p>&copy; 2024 Healthy Lifestyle. Все права защищены.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script> <!-- Изменение пути -->
+</body>
+</html>
