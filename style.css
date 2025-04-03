@@ -70,6 +70,17 @@ header {
   background-color: #703FCE; /* Эффект при наведении */
 }
 
+/* Адаптивные стили */
+@media (min-width: 768px) {
+  .navbar {
+    display: flex; /* Показываем меню на больших экранах */
+  }
+
+  .hamburger {
+    display: none; /* Скрываем кнопку меню на больших экранах */
+  }
+}
+
 main {
   padding: 20px;
   background-color: white;
