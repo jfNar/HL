@@ -13,13 +13,15 @@ body {
 }
 
 header {
-  background-color: #4CAF50;
+  background-color: #4CAF50; /* Цвет фона заголовка */
   color: white;
   padding: 10px 0;
+  position: relative; /* Для корректного позиционирования меню */
 }
 
 .logo img {
-  max-width: 100px;
+  max-width: 100px; /* Максимальная ширина логотипа */
+  float: right; /* Позиционируем логотип вправо */
 }
 
 .hamburger {
@@ -32,6 +34,11 @@ header {
 
 .navbar {
   display: none; /* Скрываем меню по умолчанию */
+  position: absolute; /* Позиционирование меню под кнопкой */
+  top: 50px; /* Расположение меню ниже кнопки */
+  left: 0; /* Привязка к левому краю */
+  background-color: #4CAF50; /* Цвет фона меню */
+  z-index: 1; /* Поверх других элементов */
 }
 
 .navbar.active {
@@ -39,18 +46,22 @@ header {
 }
 
 .navbar ul {
-  list-style: none;
+  list-style: none; /* Убираем маркеры */
   padding: 0;
+  margin: 0; /* Убираем отступы */
 }
 
 .navbar ul li {
-  display: inline;
-  margin-right: 20px;
+  padding: 10px; /* Отступы для элементов меню */
 }
 
 .navbar ul li a {
-  color: white;
-  text-decoration: none;
+  color: white; /* Цвет текста ссылок */
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+.navbar ul li a:hover {
+  background-color: #45a049; /* Цвет при наведении на ссылки */
 }
 
 main {
@@ -63,7 +74,7 @@ main {
 footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #4CAF50;
+  background-color: #4CAF50; /* Цвет фона подвала */
   color: white;
   position: relative;
   bottom: 0;
@@ -88,7 +99,7 @@ form input {
 }
 
 form button {
-  background-color: #4CAF50;
+  background-color: #4CAF50; /* Цвет кнопки */
   color: white;
   padding: 10px;
   border: none;
@@ -97,7 +108,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #45a049;
+  background-color: #45a049; /* Цвет кнопки при наведении */
 }
 
 #result {
