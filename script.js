@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Проверка диапазонов и точности
       const weightIsValid = weight >= 1 && weight <= 120 && weight * 10 % 1 === 0; // до 1 знака после запятой
-      const heightIsValid = height >= 0.01 && height <= 250 && height * 100 % 1 === 0; // до 2 знаков после запятой
+      const heightIsValid = height >= 0.01 && height <= 2.5 && height * 100 % 1 === 0; // до 2 знаков после запятой
 
       if (weightIsValid && heightIsValid) {
         const bmi = weight / (height * height);
@@ -49,8 +49,4 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("Форма или элемент результата не найдены.");
   }
-});
-document.getElementById("menuToggle").addEventListener("click", function() {
-    var navbar = document.getElementById("navbar");
-    navbar.classList.toggle("active");
 });
