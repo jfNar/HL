@@ -13,15 +13,15 @@ body {
 }
 
 header {
-  background-color: #4CAF50; /* Цвет фона заголовка */
+  background-color: #4CAF50;
   color: white;
-  padding: 10px 0;
-  position: relative; /* Для корректного позиционирования меню */
+  padding: 20px 0; /* Увеличиваем верхнюю и нижнюю отступы */
+  display: flex; /* Используем flexbox для выравнивания элементов */
+  align-items: center; /* Центрируем элементы по вертикали */
 }
 
 .logo img {
-  max-width: 100px; /* Максимальная ширина логотипа */
-  float: right; /* Позиционируем логотип вправо */
+  max-width: 100px;
 }
 
 .hamburger {
@@ -29,16 +29,17 @@ header {
   font-size: 30px;
   color: white;
   margin-right: 20px;
-  float: left; /* Позиционируем влево */
+}
+
+.menu-container {
+  display: flex;
+  align-items: center; /* Центрируем элементы по вертикали */
+  width: 100%; /* Занимаем всю ширину */
+  justify-content: space-between; /* Размещаем элементы по краям */
 }
 
 .navbar {
   display: none; /* Скрываем меню по умолчанию */
-  position: absolute; /* Позиционирование меню под кнопкой */
-  top: 50px; /* Расположение меню ниже кнопки */
-  left: 0; /* Привязка к левому краю */
-  background-color: #4CAF50; /* Цвет фона меню */
-  z-index: 1; /* Поверх других элементов */
 }
 
 .navbar.active {
@@ -46,22 +47,29 @@ header {
 }
 
 .navbar ul {
-  list-style: none; /* Убираем маркеры */
+  list-style: none;
   padding: 0;
-  margin: 0; /* Убираем отступы */
+  display: flex; /* Используем flex для размещения пунктов меню в ряд */
 }
 
 .navbar ul li {
-  padding: 10px; /* Отступы для элементов меню */
+  margin-right: 20px;
 }
 
 .navbar ul li a {
-  color: white; /* Цвет текста ссылок */
-  text-decoration: none; /* Убираем подчеркивание */
+  color: white;
+  text-decoration: none;
 }
 
-.navbar ul li a:hover {
-  background-color: #45a049; /* Цвет при наведении на ссылки */
+/* Адаптивные стили */
+@media (min-width: 768px) {
+  .navbar {
+    display: block; /* Показываем меню на больших экранах */
+  }
+
+  .hamburger {
+    display: none; /* Скрываем кнопку меню на больших экранах */
+  }
 }
 
 main {
@@ -74,7 +82,7 @@ main {
 footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #4CAF50; /* Цвет фона подвала */
+  background-color: #4CAF50;
   color: white;
   position: relative;
   bottom: 0;
@@ -99,7 +107,7 @@ form input {
 }
 
 form button {
-  background-color: #4CAF50; /* Цвет кнопки */
+  background-color: #4CAF50;
   color: white;
   padding: 10px;
   border: none;
@@ -108,7 +116,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #45a049; /* Цвет кнопки при наведении */
+  background-color: #45a049;
 }
 
 #result {
