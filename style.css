@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background-color: #4CAF50;
+  background-color: #703FF9;
   color: white;
   padding: 20px 0; /* Увеличиваем верхнюю и нижнюю отступы */
   display: flex; /* Используем flexbox для выравнивания элементов */
@@ -40,7 +40,7 @@ header {
   display: none; /* Скрываем меню по умолчанию */
   position: absolute; /* Позволяет расположить меню относительно родителя */
   right: 20px; /* Отступ от правого края */
-  background-color: #4CAF50; /* Цвет фона меню */
+  background-color: #703FF9; /* Цвет фона меню */
   border-radius: 5px; /* Скругленные углы */
   z-index: 1000; /* Показать поверх других элементов */
 }
@@ -91,7 +91,7 @@ main {
 footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #4CAF50;
+  background-color: #703FF9;
   color: white;
   position: relative;
   bottom: 0;
@@ -116,7 +116,7 @@ form input {
 }
 
 form button {
-  background-color: #4CAF50;
+  background-color: #703FF9;
   color: white;
   padding: 10px;
   border: none;
