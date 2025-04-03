@@ -50,3 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Форма или элемент результата не найдены.");
   }
 });
+document.getElementById("menuToggle").addEventListener("click", function() {
+    var navbar = document.getElementById("navbar");
+    navbar.classList.toggle("active");
+});
