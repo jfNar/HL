@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <div class="wrapper container">
+    <div class="menu-container">
       <div class="hamburger">&#9776;</div>
       <div class="logo">
         <img src="img/logo.png" alt="Healthy Lifestyle Logo">
@@ -34,10 +34,10 @@
     <h2>Калькулятор ИМТ</h2>
     <form id="bmiForm">
         <label for="weight">Вес (кг):</label>
-        <input type="float" id="weight" required>
+        <input type="number" id="weight" required>
         
         <label for="height">Рост (м):</label>
-        <input type="float" id="height" required>
+        <input type="number" step="0.01" id="height" required>
         
         <button type="submit">Рассчитать ИМТ</button>
     </form>
@@ -51,6 +51,6 @@
     </div>
   </footer>
   
-  <script src="script.js"></script> <!-- Изменение пути -->
+  <script src="script.js"></script>
 </body>
 </html>
