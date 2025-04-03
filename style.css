@@ -33,6 +33,7 @@ header {
 
 .navbar {
   display: none; /* Скрываем меню по умолчанию */
+  flex-grow: 1; /* Меню занимает оставшееся пространство */
 }
 
 .navbar.active {
@@ -42,10 +43,10 @@ header {
 .navbar ul {
   list-style: none;
   padding: 0;
+  display: flex; /* Используем flex для размещения пунктов меню в ряд */
 }
 
 .navbar ul li {
-  display: inline;
   margin-right: 20px;
 }
 
@@ -57,7 +58,7 @@ header {
 /* Адаптивные стили */
 @media (min-width: 768px) {
   .navbar {
-    display: block; /* Показываем меню на больших экранах */
+    display: flex; /* Показываем меню на больших экранах */
   }
 
   .hamburger {
