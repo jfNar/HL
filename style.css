@@ -13,71 +13,52 @@ body {
 }
 
 header {
-  background-color: #703FF9;
+  background-color: #703FF9; /* Цвет фона заголовка */
   color: white;
-  padding: 20px 0; /* Увеличиваем верхнюю и нижнюю отступы */
+  padding: 20px; /* Отступы для заголовка */
   display: flex; /* Используем flexbox для выравнивания элементов */
   align-items: center; /* Центрируем элементы по вертикали */
 }
 
 .logo {
-  margin-left: auto; /* Сдвигаем логотип вправо */
-  margin-right: 20px; /* Отступ от правого края */
+  margin-right: auto; /* Сдвигаем логотип влево */
 }
 
 .logo img {
-  max-width: 100px;
+  width: 150px; /* Ширина логотипа */
+  height: 150px; /* Высота логотипа */
 }
 
-.hamburger {
-  cursor: pointer;
-  font-size: 40px; /* Увеличиваем размер кнопки меню */
-  color: white;
-  margin-right: 20px;
+.nav-links {
+  display: flex; /* Размещаем ссылки в ряд */
+  gap: 20px; /* Отступ между ссылками */
 }
 
-.navbar {
-  display: none; /* Скрываем меню по умолчанию */
-  position: absolute; /* Позволяет расположить меню относительно родителя */
-  right: 20px; /* Отступ от правого края */
-  background-color: #703FCE; /* Цвет фона меню */
-  border-radius: 5px; /* Скругленные углы */
-  z-index: 1000; /* Показать поверх других элементов */
+.nav-links ul {
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем отступы */
+  display: flex; /* Размещаем элементы списка в строку */
 }
 
-.navbar.active {
-  display: block; /* Показываем меню при активации */
+.nav-links ul li {
+  text-align: center; /* Центрируем текст в ссылках */
 }
 
-.navbar ul {
-  list-style: none;
-  padding: 10px 0; /* Отступы внутри меню */
-  margin: 0; /* Убираем отступы вокруг списка */
+.nav-links a {
+  color: white; /* Цвет текста ссылок */
+  text-decoration: none; /* Убираем подчеркивание */
+  padding: 10px; /* Отступы для удобства клика */
 }
 
-.navbar ul li {
-  margin: 10px 0; /* Отступы между пунктами меню */
-}
-
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-  display: block; /* Занимает всю ширину */
-  padding: 10px 15px; /* Отступы для удобства клика */
-}
-
-.navbar ul li a:hover {
-  background-color: #703FCE; /* Эффект при наведении */
+/* Вертикальное расположение текста для многословных ссылок */
+.nav-links a br {
+  display: none; /* Скрываем <br>, который мы добавим в HTML */
 }
 
 /* Адаптивные стили */
-@media (min-width: 768px) {
-  .navbar {
-    display: flex; /* Показываем меню на больших экранах */
-  }
-
-  .hamburger {
-    display: none; /* Скрываем кнопку меню на больших экранах */
+@media (max-width: 768px) {
+  .nav-links ul {
+    flex-direction: column; /* Вертикальное расположение ссылок на мобильных */
   }
 }
 
@@ -91,7 +72,7 @@ main {
 footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #703FF9;
+  background-color: #703FF9; /* Цвет фона для подвала */
   color: white;
   position: relative;
   bottom: 0;
@@ -116,7 +97,7 @@ form input {
 }
 
 form button {
-  background-color: #703FF9;
+  background-color: #703FF9; /* Цвет кнопки */
   color: white;
   padding: 10px;
   border: none;
@@ -125,7 +106,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #703FCE;
+  background-color: #703FCE; /* Цвет кнопки при наведении */
 }
 
 #result {
