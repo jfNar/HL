@@ -20,20 +20,29 @@ header {
   align-items: center; /* Центрируем элементы по вертикали */
 }
 
+.logo {
+  margin-left: auto; /* Сдвигаем логотип вправо */
+  margin-right: 20px; /* Отступ от правого края */
+}
+
 .logo img {
   max-width: 100px;
 }
 
 .hamburger {
   cursor: pointer;
-  font-size: 30px;
+  font-size: 40px; /* Увеличиваем размер кнопки меню */
   color: white;
   margin-right: 20px;
 }
 
 .navbar {
   display: none; /* Скрываем меню по умолчанию */
-  flex-grow: 1; /* Меню занимает оставшееся пространство */
+  position: absolute; /* Позволяет расположить меню относительно родителя */
+  right: 20px; /* Отступ от правого края */
+  background-color: #4CAF50; /* Цвет фона меню */
+  border-radius: 5px; /* Скругленные углы */
+  z-index: 1000; /* Показать поверх других элементов */
 }
 
 .navbar.active {
@@ -42,17 +51,23 @@ header {
 
 .navbar ul {
   list-style: none;
-  padding: 0;
-  display: flex; /* Используем flex для размещения пунктов меню в ряд */
+  padding: 10px 0; /* Отступы внутри меню */
+  margin: 0; /* Убираем отступы вокруг списка */
 }
 
 .navbar ul li {
-  margin-right: 20px;
+  margin: 10px 0; /* Отступы между пунктами меню */
 }
 
 .navbar ul li a {
   color: white;
   text-decoration: none;
+  display: block; /* Занимает всю ширину */
+  padding: 10px 15px; /* Отступы для удобства клика */
+}
+
+.navbar ul li a:hover {
+  background-color: #45a049; /* Эффект при наведении */
 }
 
 /* Адаптивные стили */
