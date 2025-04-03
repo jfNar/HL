@@ -40,7 +40,7 @@ header {
   display: none; /* Скрываем меню по умолчанию */
   position: absolute; /* Позволяет расположить меню относительно родителя */
   right: 20px; /* Отступ от правого края */
-  background-color: #703FF9; /* Цвет фона меню */
+  background-color: #703FCE; /* Цвет фона меню */
   border-radius: 5px; /* Скругленные углы */
   z-index: 1000; /* Показать поверх других элементов */
 }
@@ -125,7 +125,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #45a049;
+  background-color: #703FCE;
 }
 
 #result {
