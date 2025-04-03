@@ -31,13 +31,6 @@ header {
   margin-right: 20px;
 }
 
-.menu-container {
-  display: flex;
-  align-items: center; /* Центрируем элементы по вертикали */
-  width: 100%; /* Занимаем всю ширину */
-  justify-content: space-between; /* Размещаем элементы по краям */
-}
-
 .navbar {
   display: none; /* Скрываем меню по умолчанию */
 }
@@ -49,10 +42,10 @@ header {
 .navbar ul {
   list-style: none;
   padding: 0;
-  display: flex; /* Используем flex для размещения пунктов меню в ряд */
 }
 
 .navbar ul li {
+  display: inline;
   margin-right: 20px;
 }
 
