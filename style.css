@@ -3,7 +3,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #DC143C;
+  background-color: #BB1133;
   color: #333;
   line-height: 1.6;
 }
@@ -16,7 +16,7 @@ body {
 
 /* Стили для шапки */
 header {
-  background-color: #DC143C;
+  background-color: #BB1133;
   color: white;
   padding: 15px 0;
   display: flex;
@@ -76,7 +76,7 @@ header {
 }
 
 .navbar ul li a:hover {
-  background-color: #FF6347; /* Темный оттенок при наведении */
+  background-color: #BB1133; /* Темный оттенок при наведении */
 }
 
 /* Заголовок в центре шапки */
@@ -143,7 +143,7 @@ main {
 footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #DC143C;
+  background-color: #BB1133;
   color: white;
   position: relative;
   bottom: 0;
