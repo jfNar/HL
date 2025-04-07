@@ -47,7 +47,7 @@ header {
   position: absolute;
   right: 20px;
   top: 60px; /* Смещаем меню ниже шапки */
-  background-color: #FF6347;
+  background-color: #DC143C;
   border-radius: 5px;
   z-index: 1000;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень меню */
@@ -76,7 +76,7 @@ header {
 }
 
 .navbar ul li a:hover {
-  background-color: #5d2bbd; /* Темный оттенок при наведении */
+  background-color: #FF6347; /* Темный оттенок при наведении */
 }
 
 /* Заголовок в центре шапки */
@@ -177,7 +177,7 @@ form input:focus {
 }
 
 form button {
-  background-color: #DC143C;
+  background-color: #FF6347;
   color: white;
   padding: 10px;
   border: none;
