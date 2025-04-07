@@ -22,7 +22,7 @@ header {
 
 .logo {
   margin-left: auto; /* Сдвигаем логотип вправо */
-  margin-right: 20px; /* Отступ от правого края */
+  margin-right: 10px; /* Отступ от правого края */
 }
 
 .logo img {
