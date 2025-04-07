@@ -1,9 +1,11 @@
+/* Основные стили */
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+  line-height: 1.6;
 }
 
 .wrapper {
@@ -12,37 +14,43 @@ body {
   margin: 0 auto;
 }
 
+/* Стили для шапки */
 header {
   background-color: #703FF9;
   color: white;
-  padding: 20px 0; /* Увеличиваем верхнюю и нижнюю отступы */
-  display: flex; /* Используем flexbox для выравнивания элементов */
-  align-items: center; /* Центрируем элементы по вертикали */
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Распределяем элементы по краям */
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавляем тень шапке */
 }
 
 .logo {
-  margin-left: auto; /* Сдвигаем логотип вправо */
-  right: 100px; /* Отступ от правого края */
+  margin-right: 20px;
 }
 
 .logo img {
   max-width: 100px;
+  height: auto;
 }
 
 .hamburger {
   cursor: pointer;
-  font-size: 40px; /* Увеличиваем размер кнопки меню */
+  font-size: 30px;
   color: white;
-  margin-right: 20px;
+  display: none; /* По умолчанию скрываем кнопку меню */
 }
 
 .navbar {
-  display: none; /* Скрываем меню по умолчанию */
-  position: absolute; /* Позволяет расположить меню относительно родителя */
-  right: 20px; /* Отступ от правого края */
-  background-color: #703FCE; /* Цвет фона меню */
-  border-radius: 5px; /* Скругленные углы */
-  z-index: 1000; /* Показать поверх других элементов */
+  display: none; /* Прячем меню по умолчанию */
+  position: absolute;
+  right: 20px;
+  top: 60px; /* Смещаем меню ниже шапки */
+  background-color: #703FCE;
+  border-radius: 5px;
+  z-index: 1000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень меню */
 }
 
 .navbar.active {
@@ -51,29 +59,59 @@ header {
 
 .navbar ul {
   list-style: none;
-  padding: 10px 0; /* Отступы внутри меню */
-  margin: 0; /* Убираем отступы вокруг списка */
+  margin: 0;
+  padding: 10px 0;
 }
 
 .navbar ul li {
-  margin: 10px 0; /* Отступы между пунктами меню */
+  margin: 0;
 }
 
 .navbar ul li a {
   color: white;
   text-decoration: none;
-  display: block; /* Занимает всю ширину */
-  padding: 10px 15px; /* Отступы для удобства клика */
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease; /* Анимация при наведении */
 }
 
 .navbar ul li a:hover {
-  background-color: #703FCE; /* Эффект при наведении */
+  background-color: #5d2bbd; /* Темный оттенок при наведении */
 }
 
-/* Адаптивные стили */
+/* Заголовок в центре шапки */
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Адаптивные стили для больших экранов */
 @media (min-width: 768px) {
   .navbar {
     display: flex; /* Показываем меню на больших экранах */
+    position: static; /* Убираем абсолютное позиционирование */
+    flex-direction: row; /* Горизонтальное меню */
+    background: transparent; /* Прозрачный фон */
+    box-shadow: none; /* Убираем тень */
+    padding: 0;
+  }
+
+  .navbar ul {
+    display: flex; /* Горизонтальная структура пунктов меню */
+    gap: 15px;
+  }
+
+  .navbar ul li {
+    margin: 0;
+  }
+
+  .navbar ul li a {
+    padding: 10px 15px;
+    color: white;
   }
 
   .hamburger {
@@ -81,13 +119,27 @@ header {
   }
 }
 
+/* Кнопка гамбургера для мобильных устройств */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Показываем гамбургер для мобильных */
+  }
+
+  .header-title {
+    font-size: 18px; /* Уменьшаем текст на мобильных */
+  }
+}
+
+/* Основной контент */
 main {
   padding: 20px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
+/* Стили для футера */
 footer {
   text-align: center;
   padding: 10px 0;
@@ -96,8 +148,11 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+  margin-top: 20px;
 }
 
+/* Стили для формы */
 form {
   margin-top: 20px;
 }
@@ -113,6 +168,12 @@ form input {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  transition: border-color 0.3s ease; /* Анимация при фокусе */
+}
+
+form input:focus {
+  border-color: #703FF9;
+  outline: none;
 }
 
 form button {
@@ -122,10 +183,11 @@ form button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Анимация при наведении */
 }
 
 form button:hover {
-  background-color: #703FCE;
+  background-color: #5d2bbd;
 }
 
 #result {
